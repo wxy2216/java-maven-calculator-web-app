@@ -22,3 +22,14 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+
+
+
+    - name: Run tests and generate report
+      run: mvn test
+
+    - name: Upload test report
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-reports
+        path: target/surefire-reports
