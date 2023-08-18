@@ -11,6 +11,7 @@ public class CalculatorResponse {
 
     public CalculatorResponse(int x, int y, int result) {
         _x = x;
+        
         _y = y;
         _result = result;
         _time = new Date().toString();
